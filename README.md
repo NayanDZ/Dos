@@ -8,9 +8,13 @@ Distributed Denial of Service (DDoS) Attack is an advance form of DoS where the 
 
 ## How DoS Attacks are executed?
 DoS Attacks are usually executed by flooding the target servers with unsolicited data packets in unprecedented manner. This may be done by misconfiguring network routers or by performing smurf attack on the victim servers. This results in “Capacity Overflow‟, followed by Max Out of system resources, which makes the target service unavailable, either temporarily or permanently to the intended users. 
+
 DDoS attack the origin of unsolicited data packets (for the purpose of flooding the bandwidth/resource of the victim servers) are distributed over a large network. The overall mechanism of DDoS Attack involves a huge quantity of compromised computers connected to internet, governed by agent handlers, which are further controlled centrally by the actual attacker.
+
 The massive number of compromised computers on the internet is then unknowingly governed by the source attacker to demand access to the targeted victim within a minimal time span, which further causes saturation of limited system resources and results in eventual shutdown of the targeted service.
+
 The most common method employed to compromise massive amount of user agents on the internet is by plaguing as many computers as possible over the internet with malware/trojan. Such trojans can either spread via email attachments or via Peer-to-peer networks. Once the intended Trojan is silently installed on the uninformed computer agent, that user agent has actually been compromised, which is then called as a Zombie or Botnet. source attacker to indirectly command some or all its Zombie agents (or botnets) for demanding access to the target service.
+
 ## What are other variants of DoS attacks?
 There are many other attacks of similar nature and purpose such as smurf attack, nuke bomb, ping of death, banana attack, phlashing among many others.
 ### How are they counteracted?
@@ -41,12 +45,16 @@ Now in attack:
 Several syn packets is sent to host via spoofed ip address (bad or dead ip addresses) now then what happens the host replies with syn/ack packet and host waits for the ack packet.
 
 But however the ip address don’t exist it keeps waiting, thus it queues up and eats the system resources and thus causes the server to crash or reboot.
+
 **4. Land Attack:** A land attack is similar to SYN attack, the only difference being that instead of including an invalid IP address, the SYN packet includes the IP address of the target system itself. As a result an infinite loop is created within the target system, which ultimately hangs and crashes. But almost all systems are configured against this type of attacks.
+
 **5. Smurf Attack:** There are 3 players in the smurf attack–the attacker, the intermediary (which can also be a victim) and the victim. In most scenarios the attacker spoofs the IP source address as the IP of the intended victim to the intermediary network broadcast address. Every host on the intermediary network replies, flooding the victim and the intermediary network with network traffic.
- 
+![image](https://user-images.githubusercontent.com/65315090/134779834-25b690ef-9649-476d-9364-8dfb8fb27f6e.png)
+
 **6. UDP Flood Attack:** UDP is a session less networking protocol which leverages the UDP. Several UDP echo packets are sent by the attacker to the victim machine ports randomly which cause repeatedly check for the application listening at that port and after getting no application it reply with an ICMP Destination Unreachable packet. Due to whole process creates an infinite non-stopping loop between the two systems, making them useless for any data exchange or service inaccessibility.
 
 **7. ICMP (Ping) Flood:** Is a Denial of Service Attack. In this attack, the attacker sends a large number of ICMP Echo Request or ping packets to the targeted victim’s IP address, mostly by using the flood option of ping. As a result, the victim’s machine starts responding to each ICMP packet by sending a ICMP Echo Reply packet.
+
 Now, the victim’s machine takes twice the bandwidth of the attacker – once for receiving the packets and once for sending replies. So, if the attacker already has a much higher bandwidth than the victim, the victim’s machine will get flooded with network traffic. The victim’s machine will consume large number of CPU cycles and notice significant slowdown. This attack is called Ping of Flood.
 
 
