@@ -38,13 +38,13 @@ When the target system receives such a series of packets, it cannot reassemble t
 Example:
 <table>
   <tr>
-    <div width="70%"> 
+    <div style="width:70%"> 
     Normal way:
 1.	Syn-packet is sent to the host by the client who intends to establish a connection
 2.	Then in the second step host replies with syn/ack packet to the client
 3.	Client replies with ack packet to the host and then the threeway handshake is complete
     </div>
-    <div width="30%">
+    <div style="width:30%">
     ![image](https://user-images.githubusercontent.com/65315090/134779876-bac9f826-ad23-4d0e-9d41-00840ac9d621.png)
     </div>
   </tr>
