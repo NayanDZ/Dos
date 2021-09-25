@@ -27,13 +27,15 @@ Okay now the neophyte way, it’s not that elite way but somewhat better than th
 
 ## DDOS Attack Types:-
 **1. Ping Of Death:** The ping of death attack sends oversized ICMP datagram’s (encapsulated in IP packets) to the victim. The Ping command makes use of the ICMP echo request and echo reply messages and it's commonly used to determine whether the remote host is alive. In a ping of death attack, however, ping causes the remote system to hang, reboot or crash. To do so the attacker uses, the ping command in conjunction with -l argument (used to specify the size of the packet sent) to ping the target system that exceeds the maximum bytes allowed by TCP/IP (65,536). Example:- c:/>ping -l 65540 hostname Fortunately, nearly all operating systems these days are not vulnerable to the ping of death attack.
+
 **2. Teardrop Attack:** Whenever data is sent over the internet, it is broken into fragments at the source system and reassembled at the destination system. For example you need to send 3,000 bytes of data from one system to another. Rather than sending the entire chunk in a single packet, the data is broken down into smaller packets as given below:
-•	packet 1 will carry bytes 1-1000.
-•	packet 2 will carry bytes 1001-2000.
-•	packet 3 will carry bytes 2001-3000.
+  - packet 1 will carry bytes 1-1000.
+  - packet 2 will carry bytes 1001-2000.
+  - packet 3 will carry bytes 2001-3000.
 In teardrop attack, however, the data packets sent to the target computer contains bytes that overlap with each other.
 (bytes 1-1500) (bytes 1001-2000) (bytes 1500-2500)
 When the target system receives such a series of packets, it cannot reassemble the data and therefore will crash, hang, or reboot. Old Linux systems, Windows NT/95 are vulnerable.	
+
 **3. SYN Flood Attack:** In SYN flooding attack, several SYN packets are sent to the target host, all with an invalid source IP address. When the target system receives these SYN packets, it tries to respond to each one with a SYN/ACK packet but as all the source IP addresses are invalid the target system goes into wait state for ACK message to receive from source. Eventually, due to large number of connection requests, the target systems' memory is consumed. In a SYN flood, multiple SYN request are send from the spoofed IP address and the attacker not respond the host's SYN-ACK response, which make host system to bind the resources until they get the acknowledgement of each of the requests. These type of binding resources ultimately causing denial of service.
 
 Example:
