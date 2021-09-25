@@ -51,13 +51,13 @@ Now, the victim’s machine takes twice the bandwidth of the attacker – once f
 
 
 ### DDoS Tools
-•	LOIC - Open source network stress tool for Windows.
-•	JS LOIC - JavaScript in-browser version of LOIC.
-•	SlowLoris - DoS tool that uses low bandwidth on the attacking side.
-•	HOIC - Updated version of Low Orbit Ion Cannon, has 'boosters' to get around common counter measures.
-•	T50 - Faster network stress tool.
-•	UFONet - Abuses OSI layer 7 HTTP to create/manage 'zombies' and to conduct different attacks using; GET/POST, multithreading, proxies, origin spoofing methods, cache evasion techniques, etc.
-•	Memcrashed - DDoS attack tool for sending forged UDP packets to vulnerable Memcached servers obtained using Shodan API.
+- LOIC - Open source network stress tool for Windows.
+- JS LOIC - JavaScript in-browser version of LOIC.
+- SlowLoris - DoS tool that uses low bandwidth on the attacking side.
+- HOIC - Updated version of Low Orbit Ion Cannon, has 'boosters' to get around common counter measures.
+- T50 - Faster network stress tool.
+- UFONet - Abuses OSI layer 7 HTTP to create/manage 'zombies' and to conduct different attacks using; GET/POST, multithreading, proxies, origin spoofing methods, cache evasion techniques, etc.
+- Memcrashed - DDoS attack tool for sending forged UDP packets to vulnerable Memcached servers obtained using Shodan API.
 
 ### Usefull Refrence Link
 
