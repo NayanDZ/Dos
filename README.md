@@ -36,15 +36,11 @@ In teardrop attack, however, the data packets sent to the target computer contai
 When the target system receives such a series of packets, it cannot reassemble the data and therefore will crash, hang, or reboot. Old Linux systems, Windows NT/95 are vulnerable.	
 **3. SYN Flood Attack:** In SYN flooding attack, several SYN packets are sent to the target host, all with an invalid source IP address. When the target system receives these SYN packets, it tries to respond to each one with a SYN/ACK packet but as all the source IP addresses are invalid the target system goes into wait state for ACK message to receive from source. Eventually, due to large number of connection requests, the target systems' memory is consumed. In a SYN flood, multiple SYN request are send from the spoofed IP address and the attacker not respond the host's SYN-ACK response, which make host system to bind the resources until they get the acknowledgement of each of the requests. These type of binding resources ultimately causing denial of service.
 Example:
-
-| Normal way  | Second Header |
-| ------------- | ------------- |
-| 1. Syn-packet is sent to the host by the client who intends to establish a connection  | Content Cell  |
-| 2. Then in the second step host replies with syn/ack packet to the client  | Content Cell  |
-| 3. Client replies with ack packet to the host and then the threeway handshake is complete  | Content Cell  |
-| ![image](https://user-images.githubusercontent.com/65315090/134779876-bac9f826-ad23-4d0e-9d41-00840ac9d621.png)  | Content Cell  |
-
-![image](https://user-images.githubusercontent.com/65315090/134779876-bac9f826-ad23-4d0e-9d41-00840ac9d621.png)
+Normal way:
+1. Syn-packet is sent to the host by the client who intends to establish a connection
+2. Then in the second step host replies with syn/ack packet to the client 
+3. Client replies with ack packet to the host and then the threeway handshake is complete 
+![image](https://user-images.githubusercontent.com/65315090/134779876-bac9f826-ad23-4d0e-9d41-00840ac9d621.png) 
 
 Now in attack:
 Several syn packets is sent to host via spoofed ip address (bad or dead ip addresses) now then what happens the host replies with syn/ack packet and host waits for the ack packet.
