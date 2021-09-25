@@ -34,17 +34,27 @@ Okay now the neophyte way, it’s not that elite way but somewhat better than th
 In teardrop attack, however, the data packets sent to the target computer contains bytes that overlap with each other.
 (bytes 1-1500) (bytes 1001-2000) (bytes 1500-2500)
 When the target system receives such a series of packets, it cannot reassemble the data and therefore will crash, hang, or reboot. Old Linux systems, Windows NT/95 are vulnerable.	
-**3. SYN:** Flood Attack: - In SYN flooding attack, several SYN packets are sent to the target host, all with an invalid source IP address. When the target system receives these SYN packets, it tries to respond to each one with a SYN/ACK packet but as all the source IP addresses are invalid the target system goes into wait state for ACK message to receive from source. Eventually, due to large number of connection requests, the target systems' memory is consumed. In a SYN flood, multiple SYN request are send from the spoofed IP address and the attacker not respond the host's SYN-ACK response, which make host system to bind the resources until they get the acknowledgement of each of the requests. These type of binding resources ultimately causing denial of service.
+**3. SYN Flood Attack:** In SYN flooding attack, several SYN packets are sent to the target host, all with an invalid source IP address. When the target system receives these SYN packets, it tries to respond to each one with a SYN/ACK packet but as all the source IP addresses are invalid the target system goes into wait state for ACK message to receive from source. Eventually, due to large number of connection requests, the target systems' memory is consumed. In a SYN flood, multiple SYN request are send from the spoofed IP address and the attacker not respond the host's SYN-ACK response, which make host system to bind the resources until they get the acknowledgement of each of the requests. These type of binding resources ultimately causing denial of service.
 Example:
-Normal way:
+<table>
+  <tr>
+    <div width="70%"> 
+    Normal way:
 1.	Syn-packet is sent to the host by the client who intends to establish a connection
 2.	Then in the second step host replies with syn/ack packet to the client
 3.	Client replies with ack packet to the host and then the threeway handshake is complete
+    </div>
+    <div width="30%">
+    ![image](https://user-images.githubusercontent.com/65315090/134779876-bac9f826-ad23-4d0e-9d41-00840ac9d621.png)
+    </div>
+  </tr>
+</table>
 
 Now in attack:
 Several syn packets is sent to host via spoofed ip address (bad or dead ip addresses) now then what happens the host replies with syn/ack packet and host waits for the ack packet.
 
 But however the ip address don’t exist it keeps waiting, thus it queues up and eats the system resources and thus causes the server to crash or reboot.
+![image](https://user-images.githubusercontent.com/65315090/134779886-05d29977-422b-4a23-88ba-fcbea7bd7c31.png)
 
 **4. Land Attack:** A land attack is similar to SYN attack, the only difference being that instead of including an invalid IP address, the SYN packet includes the IP address of the target system itself. As a result an infinite loop is created within the target system, which ultimately hangs and crashes. But almost all systems are configured against this type of attacks.
 
@@ -52,6 +62,8 @@ But however the ip address don’t exist it keeps waiting, thus it queues up and
 ![image](https://user-images.githubusercontent.com/65315090/134779834-25b690ef-9649-476d-9364-8dfb8fb27f6e.png)
 
 **6. UDP Flood Attack:** UDP is a session less networking protocol which leverages the UDP. Several UDP echo packets are sent by the attacker to the victim machine ports randomly which cause repeatedly check for the application listening at that port and after getting no application it reply with an ICMP Destination Unreachable packet. Due to whole process creates an infinite non-stopping loop between the two systems, making them useless for any data exchange or service inaccessibility.
+![image](https://user-images.githubusercontent.com/65315090/134779858-741c9d94-6af7-41bb-b2f9-f09c88528769.png)
+
 
 **7. ICMP (Ping) Flood:** Is a Denial of Service Attack. In this attack, the attacker sends a large number of ICMP Echo Request or ping packets to the targeted victim’s IP address, mostly by using the flood option of ping. As a result, the victim’s machine starts responding to each ICMP packet by sending a ICMP Echo Reply packet.
 
