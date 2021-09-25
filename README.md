@@ -1,10 +1,8 @@
 # DOS/DDOS
 
-DENIAL OF SERVICE ATTACKS
+**Denial of Service (DoS) Attack** is a fatal attempt by an external agent to cause a situation where the actual resource becomes unavailable to the actual visitors or users. This is usually done by illegitimate traffic in the form of broken/unsolicited page access requests.
 
-## What is DOS/DDOS Attack?
-Denial of Service (DoS) Attack is a fatal attempt by an external agent to cause a situation where the actual resource becomes unavailable to the actual visitors or users. This is usually done by illegitimate traffic in the form of broken/unsolicited page access requests.
-Distributed Denial of Service (DDoS) Attack is an advance form of DoS where the attacking agents are distributed over the huge network.
+**Distributed Denial of Service (DDoS) Attack** is an advance form of DoS where the attacking agents are distributed over the huge network.
 
 ## How DoS Attacks are executed?
 DoS Attacks are usually executed by flooding the target servers with unsolicited data packets in unprecedented manner. This may be done by misconfiguring network routers or by performing smurf attack on the victim servers. This results in “Capacity Overflow‟, followed by Max Out of system resources, which makes the target service unavailable, either temporarily or permanently to the intended users. 
@@ -17,8 +15,10 @@ The most common method employed to compromise massive amount of user agents on t
 
 ## What are other variants of DoS attacks?
 There are many other attacks of similar nature and purpose such as smurf attack, nuke bomb, ping of death, banana attack, phlashing among many others.
+
 ### How are they counteracted?
 The best way to defend a web service from faltering due to DDoS attack is to keep backup resources of the system intact. As the aim of such attack is to max out system resources, if the system resources are already abundant and well prepared to face that sudden peak of traffic at any moment, most chances are that your web service will survive DoS (or even DDoS) attack.
+
 ### Two ways for dos attacks one is the lame way and the other is the elite way
 
 ### Lame way:
@@ -69,7 +69,6 @@ But however the ip address don’t exist it keeps waiting, thus it queues up and
 **6. UDP Flood Attack:** UDP is a session less networking protocol which leverages the UDP. Several UDP echo packets are sent by the attacker to the victim machine ports randomly which cause repeatedly check for the application listening at that port and after getting no application it reply with an ICMP Destination Unreachable packet. Due to whole process creates an infinite non-stopping loop between the two systems, making them useless for any data exchange or service inaccessibility.
 
 ![image](https://user-images.githubusercontent.com/65315090/134779858-741c9d94-6af7-41bb-b2f9-f09c88528769.png)
-
 
 **7. ICMP (Ping) Flood:** Is a Denial of Service Attack. In this attack, the attacker sends a large number of ICMP Echo Request or ping packets to the targeted victim’s IP address, mostly by using the flood option of ping. As a result, the victim’s machine starts responding to each ICMP packet by sending a ICMP Echo Reply packet.
 
