@@ -21,7 +21,9 @@ There are many other attacks of similar nature and purpose such as smurf attack,
 The best way to defend a web service from faltering due to DDoS attack is to keep backup resources of the system intact. As the aim of such attack is to max out system resources, if the system resources are already abundant and well prepared to face that sudden peak of traffic at any moment, most chances are that your web service will survive DoS (or even DDoS) attack.
 ### Two ways for dos attacks one is the lame way and the other is the elite way
 ### Lame way:
+
 **Email Bombs:** it s the technique in which a person email A/C is flooded with emails; it’s the lamest form of DOS attack. All a person has to do is go on the net get some email bomber like UNA or KABOOM put the victims address and there ya go , his email address will be flooded with the unwanted emails, there is also another way put his email address into some porn subscription he will get bombed without you doing anything.
+
 **Continuous login:** suppose a server is configured to allow only specified amount login attempts then ,and you know his username you can lock his account, by attempting to connect by his name to the server which will lock his account and there ya go , the legitimate user won’t be able to log in ,the reason, you locked his A/C.
 Okay now the neophyte way, it’s not that elite way but somewhat better than the lame way, at least you are doing something technical.
 
@@ -40,14 +42,13 @@ When the target system receives such a series of packets, it cannot reassemble t
 
 Example:
 
-Normal way:
+***Normal way:***
 1. Syn-packet is sent to the host by the client who intends to establish a connection
 2. Then in the second step host replies with syn/ack packet to the client
 3. Client replies with ack packet to the host and then the threeway handshake is complete
 ![image](https://user-images.githubusercontent.com/65315090/134779876-bac9f826-ad23-4d0e-9d41-00840ac9d621.png) 
 
-Now in attack:
-Several syn packets is sent to host via spoofed ip address (bad or dead ip addresses) now then what happens the host replies with syn/ack packet and host waits for the ack packet.
+***Now in attack:*** Several syn packets is sent to host via spoofed ip address (bad or dead ip addresses) now then what happens the host replies with syn/ack packet and host waits for the ack packet.
 
 But however the ip address don’t exist it keeps waiting, thus it queues up and eats the system resources and thus causes the server to crash or reboot.
 ![image](https://user-images.githubusercontent.com/65315090/134779886-05d29977-422b-4a23-88ba-fcbea7bd7c31.png)
