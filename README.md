@@ -30,7 +30,11 @@ The best way to defend a web service from faltering due to DDoS attack is to kee
 Okay now the neophyte way, it’s not that elite way but somewhat better than the lame way, at least you are doing something technical.
 
 ## DDOS Attack Types:-
-**1. Ping Of Death:** The ping of death attack sends oversized ICMP datagram’s (encapsulated in IP packets) to the victim. The Ping command makes use of the ICMP echo request and echo reply messages and it's commonly used to determine whether the remote host is alive. In a ping of death attack, however, ping causes the remote system to hang, reboot or crash. To do so the attacker uses, the ping command in conjunction with -l argument (used to specify the size of the packet sent) to ping the target system that exceeds the maximum bytes allowed by TCP/IP (65,536). Example:- c:/>ping -l 65540 hostname Fortunately, nearly all operating systems these days are not vulnerable to the ping of death attack.
+**1. Ping Of Death:** The ping of death attack sends oversized ICMP datagram’s (encapsulated in IP packets) to the victim. The Ping command makes use of the ICMP echo request and echo reply messages and it's commonly used to determine whether the remote host is alive. In a ping of death attack, however, ping causes the remote system to hang, reboot or crash. To do so the attacker uses, the ping command in conjunction with -l argument (used to specify the size of the packet sent) to ping the target system that exceeds the maximum bytes allowed by TCP/IP (65,536). 
+
+**Example:** ``` c:/>ping -l 65540 hostname  ```  (-I Interface | Internal | Preload)
+
+Fortunately, nearly all operating systems these days are not vulnerable to the ping of death attack.
 
 **2. Teardrop Attack:** Whenever data is sent over the internet, it is broken into fragments at the source system and reassembled at the destination system. For example you need to send 3,000 bytes of data from one system to another. Rather than sending the entire chunk in a single packet, the data is broken down into smaller packets as given below:
   - packet 1 will carry bytes 1-1000.
