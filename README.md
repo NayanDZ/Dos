@@ -87,6 +87,7 @@ Now, the victim’s machine takes twice the bandwidth of the attacker – once f
 - T50 - Faster network stress tool.
 - UFONet - Abuses OSI layer 7 HTTP to create/manage 'zombies' and to conduct different attacks using; GET/POST, multithreading, proxies, origin spoofing methods, cache evasion techniques, etc.
 - Memcrashed - DDoS attack tool for sending forged UDP packets to vulnerable Memcached servers obtained using Shodan API.
+- [doser.py](https://github.com/Quitten/doser.py): DoS tool for HTTP requests
 
 ### Usefull Refrence Link
 
